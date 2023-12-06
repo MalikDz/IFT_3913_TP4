@@ -1,0 +1,91 @@
+--------------------Jeu de test pour la methode "currencyConverter.MainWindow.convert(String, String, ArrayList<Currency>, Double)" ------------------------
+
+
+SPECIFICATIONS :
+		C = ensemble de currencies implementes = {"USD","EUR","GBP","CHF","CNY","JPY"}
+		RANGE de la variable montant = [0, 1 000 000]
+
+
+
+VARIABLE -> "montant" ;		PARTITION -> "INFERIEUR au range"		VALEUR POSSIBLE: -1000
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 EXISTE dans C  ,   curr2 EXISTE  dans C ,  C  ,  montant INFERIEUR au range" 	
+						Exemple:("USD","EUR",C, -1000)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 EXISTE dans C  ,   curr2 NEXISTE PAS dans C ,  C  ,  montant INFERIEUR au range" 	
+						Exemple:("USD","DZD",C, -1000)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 NEXISTE PAS dans C  ,   curr2 EXISTE  dans C ,  C  ,  montant INFERIEUR au range" 	
+						Exemple:("DZD","USD",C, -1000)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 NEXISTE PAS dans C  ,   curr2 NEXISTE PAS  dans C ,  C  ,  montant INFERIEUR au range" 	
+						Exemple:("DZD","DZD",C, -1000)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> "curr1= curr2 ,  C  ,  montant INFERIEUR au range" 	
+						Exemple:("USD","USD",C, -1000)
+						
+
+
+VARIABLE -> montant ;    PARTITION -> DANS le range				VALEUR POSSIBLE:500
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 EXISTE dans C  ,   curr2 EXISTE  dans C ,  C  ,  montant DANS le range" 	
+						Exemple:("USD","EUR",C, 500)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 EXISTE dans C  ,   curr2 NEXISTE PAS dans C ,  C  ,  montant DANS le range" 	
+						Exemple:("USD","DZD",C, 500)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 NEXISTE PAS dans C  ,   curr2 EXISTE  dans C ,  C  ,  montant DANS le range" 	
+						Exemple:("DZD","USD",C, 500)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 NEXISTE PAS dans C  ,   curr2 NEXISTE PAS  dans C ,  C  ,  montant DANS le range" 	
+						Exemple:("DZD","DZD",C, 500)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> "curr1= curr2 ,  C  ,  montant DANS le range" 	
+						Exemple:("USD","USD",C, 500)
+
+VARIABLE -> montant ; 	  PARTITION -> FRONTIERE SUPERIEUR au range		VALEUR POSSIBLE:2 000 000
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 EXISTE dans C  ,   curr2 EXISTE  dans C ,  C  ,  montant SUPERIEUR au range" 	
+						Exemple:("USD","EUR",C, 2 000 000)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 EXISTE dans C  ,   curr2 NEXISTE PAS dans C ,  C  ,  montant SUPERIEUR au range" 	
+						Exemple:("USD","DZD",C, 2 000 000)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 NEXISTE PAS dans C  ,   curr2 EXISTE  dans C ,  C  ,  montant SUPERIEUR au range" 	
+						Exemple:("DZD","USD",C, 2 000 000)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 NEXISTE PAS dans C  ,   curr2 NEXISTE PAS  dans C ,  C  ,  montant SUPERIEUR au range" 	
+						Exemple:("DZD","DZD",C, 2 000 000)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> "curr1= curr2 ,  C  ,  montant SUPERIEUR au range" 	
+						Exemple:("USD","USD",C, 2 000 000)
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+VARIABLE -> montant ; 	  PARTITION -> FRONTIERE INFERIEUR au range 
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 EXISTE dans C  ,   curr2 NEXISTE PAS dans C ,  C  ,  montant INFERIEUR au range" 	
+						Exemple:("USD","DZD",C, -1000)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 NEXISTE PAS dans C  ,   curr2 EXISTE  dans C ,  C  ,  montant INFERIEUR au range" 	
+						Exemple:("AUD","USD",C, -1000)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 NEXISTE PAS dans C  ,   curr2 NEXISTE PAS  dans C ,  C  ,  montant INFERIEUR au range" 	
+						Exemple:("AUD","AUD",C, -1000)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> "curr1= curr2 ,  C  ,  montant INFERIEUR au range" 	
+						Exemple:("USD","USD",C, -1000)
+
+
+VARIABLE -> montant ;   PARTITION -> SUPERIEUR au range 
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 EXISTE dans C  ,   curr2 NEXISTE PAS dans C ,  C  ,  montant INFERIEUR au range" 	
+						Exemple:("USD","DZD",C, -1000)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 NEXISTE PAS dans C  ,   curr2 EXISTE  dans C ,  C  ,  montant INFERIEUR au range" 	
+						Exemple:("AUD","USD",C, -1000)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> " curr1 NEXISTE PAS dans C  ,   curr2 NEXISTE PAS  dans C ,  C  ,  montant INFERIEUR au range" 	
+						Exemple:("AUD","AUD",C, -1000)
+		-VARIABLE -> "curr1->curr2" ;	PARTITION -> "curr1= curr2 ,  C  ,  montant INFERIEUR au range" 	
+						Exemple:("USD","USD",C, -1000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
