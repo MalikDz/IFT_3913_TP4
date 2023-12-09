@@ -15,7 +15,8 @@ Structure du projet :
 											 du graphe de flot de contrôle pour le test boite blanche.
 
 		FICHIER								CONTENU
-		-rapport.pdf						-Le rapport du projet.
+		-rapport.pdf						-Le rapport du projet en version PDF.
+		-rapport.docx						-Le rapport du projet, en version Word.
 		-Tests_Boite_Noir.txt				-Les jeux de test boite noire pour la méthode
 											 currencyConverter.MainWindow.convert(String, String, ArrayList<Currency>, Double).
 
