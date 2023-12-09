@@ -9,7 +9,7 @@ import currencyConverter.MainWindow;
 
 class CurrencyTest {
 
-	// TEST DONT LES VALEURS DU AMOUNT SONT NEGATIF !!
+	// TESTS DONT LES VALEURS DU AMOUNT SONT NÉGATIVES
 	@Test
 	void testConvert_NegativeAmountNegativeExchangeRate() {
 		assertEquals(Currency.convert(Double.valueOf(-1000), Double.valueOf(-2)), Double.valueOf(-1));
@@ -42,7 +42,7 @@ class CurrencyTest {
 		assertEquals(Currency.convert(Double.valueOf(5000), Double.valueOf(1.5)), Double.valueOf(7500));
 	}
 
-	// TESTs DONT LES VALEURS DU AMOUNT TROP GRAND (>1000000 !!
+	// TESTS DONT LES VALEURS DU AMOUNT SONT TROP GRANDES (>1000000)
 
 	@Test
 	void testConvert_ToLargeAmountNegativeExchangeRate() {
@@ -59,7 +59,7 @@ class CurrencyTest {
 		assertEquals(Currency.convert(Double.valueOf(2000000), Double.valueOf(1.5)), Double.valueOf(-1));
 	}
 
-	// TEST POUR LA PARTIE 2
+	// TEST POUR LA PARTIE 2 (BOITE BLANCHE)
 	
 	@Test
 	void testConvert_Partie2() {

@@ -23,16 +23,16 @@ class MainWindowTest {
 			currencies.get(i).defaultValues();
 		}
 	}
-	// NOTE IMPORTANTE :La valeur de retour -1 est retourner lorsqu'on veut
+	// NOTE IMPORTANTE : La valeur de retour -1 est retournée lorsqu'on veut
 	// retourner une valeur qui ne fait pas de sens.
 	// Dans notre cas, la conversion d'un montant negatif devrait nous retourner -1
-	// car un montant ne peut pas etre negatif
+	// car un montant ne peut pas être négatif.
 
-	// expected return : -1 car le montant negatif ne fait pas de sens donc -1 est
-	// la valeur numerique
-	// qui nous indique que la valeur calcule ne fait pas de sens
+	// expected return : -1 car le montant négatif ne fait pas de sens donc -1 est
+	// la valeur numérique
+	// qui nous indique que la valeur calculée ne fait pas de sens.
 
-	// TEST DONT LES VALEURS DU AMOUNT SONT NEGATIF !!
+	// TESTS DONT LES VALEURS DU AMOUNT SONT NÉGATIVES
 	@Test
 	void testConvert_NegativeAmountUsdToEuro() {
 		assertEquals(MainWindow.convert("US Dollar", "Euro", currencies, Double.valueOf(-1000)), Double.valueOf(-1));
@@ -62,7 +62,7 @@ class MainWindowTest {
 				Double.valueOf(-1));
 	}
 
-	// TEST DONT LES VALEURS DU AMOUNT SONT DANS LE RANGE DES VALEURS ACCEPTABLES !!
+	// TESTS DONT LES VALEURS DU AMOUNT SONT DANS LE RANGE DES VALEURS ACCEPTABLES
 
 	@Test
 	void testConvert_WithinRangeAmountUsdToEuro() {
@@ -94,7 +94,7 @@ class MainWindowTest {
 				Double.valueOf(500));
 	}
 
-	// TESTs DONT LES VALEURS DU AMOUNT TROP GRAND (>1000000 !!
+	// TESTS DONT LES VALEURS DU AMOUNT TROP GRANDES (>1000000)
 
 	@Test
 	void testConvert_ToLargeAmountUsdToEuro() {
@@ -126,7 +126,7 @@ class MainWindowTest {
 				Double.valueOf(-1));
 	}
 
-	// TEST POUR LA PARTIE 2
+	// TESTS POUR LA PARTIE 2 (BOITE BLANCHE)
 
 	@Test
 	void testConvert_EmptyCurrencyArray() {

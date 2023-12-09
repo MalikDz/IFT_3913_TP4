@@ -4,7 +4,11 @@ Malik Abada (matricule 20173066)
 
 Structure du projet :
 		DOSSIER								CONTENU
-		-currency-converter-in-java-master	-Contient une copie du repo git du même nom.
+		-currency-converter-in-java-master	-Contient une copie du repo git du même nom, ainsi que nos tests JUnit.
+			-src							-Contient le code source de Currency Converter.
+			-currencyConverter				-Les fichiers Java incluant Currency.java et MainWindow.java, que l'on teste.
+			-localization					-La traduction (pas utile dans notre cas).
+			-test							-Contient nos tests JUnit.
 		-graphe-et-chemins					-Contient l'image du graphe de flot de contrôle de la méthode 
 											 currencyConverter.MainWindow.convert(String, String, ArrayList<Currency>, Double),
 											 ainsi que les images des chemins du critère de couverture des chemins indépendants
