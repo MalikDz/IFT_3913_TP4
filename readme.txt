@@ -25,5 +25,7 @@ Lien vers IntelliJ pour Windows (pour Java) :
 	https://www.jetbrains.com/idea/download/?section=windows
 Lien vers Eclipse IDE (pour Java) : 
 	https://www.eclipse.org/downloads/packages/installer
+Lien vers JUnit :
+	https://junit.org/
 Lien vers Wolfram Alpha (spécifiquement vers le calculateur de rang de matrice) :
 	https://www.wolframalpha.com/input?i=matrix+rank+calculator
