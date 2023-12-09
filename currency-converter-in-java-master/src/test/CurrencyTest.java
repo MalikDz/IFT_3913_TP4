@@ -58,4 +58,11 @@ class CurrencyTest {
 	void testConvert_ToLargeAmountPostiveExchangeRate() {
 		assertEquals(Currency.convert(Double.valueOf(2000000), Double.valueOf(1.5)), Double.valueOf(-1));
 	}
+
+	// TEST POUR LA PARTIE 2
+	
+	@Test
+	void testConvert_Partie2() {
+		assertEquals(Currency.convert(Double.valueOf(100), Double.valueOf(1.4)), Double.valueOf(140));
+	}
 }
